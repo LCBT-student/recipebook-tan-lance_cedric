@@ -132,4 +132,4 @@ def recipe2_view(request):
         ],
         "link": "/recipe/2"
     }
-    return render(request, "ldeger/recipe_view.html", ctx)
+    return render(request, "ledger/recipe_view.html", ctx)
