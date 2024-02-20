@@ -3,11 +3,12 @@
 
 {% block head %}Recipe Book{% endblock %}
 {% block content %}
+    <h1>Recipe Book</h1>
     <ul>
         {% for recipe in recipes %}
-            <title><a href="">{{ name }}</a></title>
-            {% for ingredient in ingredients %}
-                <li>{{ name }} {{ quantity }}</li>
+            <h4><a href="{{ recipe.link }}">{{ recipe.name }}</a></h4>
+            {% for ingredient in recipe.ingredients %}
+                <li>{{ ingredient.name }} {{ ingredient.quantity }}</li>
             {% endfor %}
         {% endfor %}
     </ul>
