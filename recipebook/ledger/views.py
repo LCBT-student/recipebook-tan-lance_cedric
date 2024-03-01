@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+
 def ledger_view(request):
     ctx = {
         "recipes": [
@@ -68,6 +68,7 @@ def ledger_view(request):
     }
     return render(request, "ledger/ledger_view.html", ctx)
 
+
 def recipe1_view(request):
     ctx = {
         "name": "Recipe 1",
@@ -96,6 +97,7 @@ def recipe1_view(request):
         "link": "/recipe/1"
     }
     return render(request, "ledger/recipe_view.html", ctx)
+
 
 def recipe2_view(request):
     ctx = {
