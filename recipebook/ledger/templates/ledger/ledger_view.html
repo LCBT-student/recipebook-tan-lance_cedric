@@ -5,11 +5,8 @@
 {% block content %}
     <h1>Recipe Book</h1>
     <ul>
-        {% for recipe in recipes %}
-            <h4><a href="{{ recipe.link }}">{{ recipe.name }}</a></h4>
-            {% for ingredient in recipe.ingredients %}
-                <li>{{ ingredient.name }} {{ ingredient.quantity }}</li>
-            {% endfor %}
+        {% for recipe in object_list %}
+            <h4><a href="{{ recipe.get_absolute_url }}">Recipe {{ recipe.name }}</a></h4>
         {% endfor %}
     </ul>
 {% endblock %}
